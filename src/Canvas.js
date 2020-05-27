@@ -146,6 +146,7 @@ export default class Canvas extends Component {
         <View style={[stylesheet.container, {width, height}, style]}>
           <WebView
             ref={this.handleRef}
+            useWebKit={true}
             style={[isAndroid9 ? stylesheet.webviewAndroid9 : stylesheet.webview, {height, width}]}
             source={{html, baseUrl}}
             originWhitelist={originWhitelist}
@@ -165,6 +166,7 @@ export default class Canvas extends Component {
       <View style={[stylesheet.container, {width, height, opacity: isLoaded ? 1 : 0}, style]}>
         <WebView
           ref={this.handleRef}
+          useWebKit={true}
           style={[stylesheet.webview, {height, width}]}
           source={{html, baseUrl}}
           originWhitelist={originWhitelist}
